@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Technologies</title>
+  <!-- Link to Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+    
+    
+      
+
+    }
+   
+
+    .flex-container{
+      display: flex;
+      justify-content:space-between;
+      flex-wrap: wrap;
+      text-align: justify;
+       margin-bottom: 20px;
+    }
+
+   
+
+    .grid-container{
+
+        display: grid;
+     
+
+    }
+
+    .flex-item, .grid-item {
+      width: calc(33.33% - 10px);
+      margin-bottom: 20px;
+      padding : 20px;
+     
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+
+    footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position : fixed;
+        }
+
+    footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+    header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+    nav {
+            display: flex;
+            justify-content: center;
+            position : static;
+        
+            background-color: #444;
+        }
+
+    nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+
+    nav a:hover {
+            background-color: red;
+        }
+
+
+
+    @media (max-width: 768px) {
+
+      .flex-item, .grid-item {
+        width: calc(50% - 10px);
+
+        color: rebeccapurple
+      }
+
+      h2{
+
+        color: red
+      }
+    }
+
+
+    @media (max-width: 576px) {
+      .flex-item, .grid-item {
+        width: 100%;
+    
+      }
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Web Tech</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+  <h2>Flexbox Example</h2>
+
+
+
+  <div class="flex-container">
+
+
+    <div class="flex-item">
+
+      <h3>1. Introduction to Flexbox</h3>
+      <p>
+        Flexbox, or the Flexible Box Layout, is a modern CSS layout model that simplifies the process of designing complex layouts in web applications. With Flexbox, you can create responsive and dynamic designs, making it easier to align and distribute space within a container. It is particularly useful for one-dimensional layouts, such as navigation bars, sidebars, and lists. Flexbox provides a set of properties for both the container and its items, allowing for precise control over the layout structure. Some key properties include `display: flex`, `justify-content`, `align-items`, and more.
+      </p>
+      <p>
+        In our example, the flex container holds six flex items. The items are distributed evenly with the help of `justify-content: space-between`. As the viewport size changes, media queries ensure a responsive design, adapting the layout for various screen sizes. Flexbox is a powerful tool for creating intuitive and flexible layouts without the need for complex CSS positioning.
+      </p>
+    </div>
+
+
+    <div class="flex-item">
+
+      <h3>2. Practical Uses of Flexbox</h3>
+      <p>
+        Flexbox is commonly employed in creating navigation menus, card layouts, and form designs. It simplifies the alignment of items along both the main and cross axes, making it easy to center elements vertically and horizontally. Responsive web design often relies on Flexbox to create layouts that adjust seamlessly to different screen sizes. With its intuitive syntax and widespread browser support, Flexbox is an essential tool for modern web developers.
+      </p>
+      <p>
+        As you explore web development, understanding Flexbox is crucial for efficient layout design. Experiment with different properties and values to gain hands-on experience. The flexibility and simplicity of Flexbox make it an indispensable part of the web developer's toolkit.
+      </p>
+    </div>
+
+    <div class="flex-item">
+      <h3>3. Getting Started with Flexbox</h3>
+      <p>
+        To start using Flexbox, simply set the `display` property of the container to `flex`. This activates the Flexbox layout for the container. From there, you can use various properties to control the alignment, spacing, and sizing of the items within the container. Don't forget to explore the `flex-grow`, `flex-shrink`, and `flex-basis` properties for fine-tuning the behavior of individual items.
+      </p>
+      <p>
+        Flexbox is supported by all major modern browsers, making it a reliable choice for creating consistent layouts across different platforms. As you delve into web development, mastering Flexbox will enhance your ability to create visually appealing and responsive websites.
+      </p>
+    </div>
+  </div>
+
+
+  <h2>Grid Example</h2>
+
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <h3>1. Understanding CSS Grid</h3>
+      <p>
+        CSS Grid Layout is a two-dimensional layout system that brings powerful capabilities for creating complex web layouts. It allows you to define rows and columns in a grid, providing precise control over the placement and sizing of elements. CSS Grid is particularly useful for creating grid-based designs, such as magazine layouts, image galleries, and responsive web applications.
+      </p>
+      <p>
+        In our example, six grid items are arranged using the CSS Grid layout. The container specifies the grid template columns, and the items are placed within the grid cells. CSS Grid simplifies the creation of intricate layouts and reduces the need for additional container elements or complex positioning.
+      </p>
+    </div>
+
+    <div class="grid-item">
+      <h3>2. Benefits of CSS Grid</h3>
+      <p>
+        CSS Grid offers numerous benefits for web developers. It provides a clean and concise way to structure layouts, reducing the reliance on floats and positioning hacks. With CSS Grid, you can create responsive designs without relying heavily on media queries, as the grid adapts naturally to different screen sizes. This makes it easier to build websites that look great on both desktop and mobile devices.
+      </p>
+      <p>
+        The ability to create flexible and grid-based designs makes CSS Grid a valuable tool for building modern, visually appealing websites. Explore the `grid-template-columns`, `grid-template-rows`, and `grid-gap` properties to unleash the full potential of CSS Grid in your projects.
+      </p>
+    </div>
+
+    <div class="grid-item">
+      <h3>3. Getting Started with CSS Grid</h3>
+      <p>
+        To use CSS Grid, set the `display` property of the container to `grid`. Specify the grid structure using properties like `grid-template-columns` and `grid-template-rows`. Place items within the grid using the `grid-column` and `grid-row` properties. CSS Grid provides a robust and flexible layout system, allowing for both simple and intricate designs.
+      </p>
+      <p>
+        CSS Grid is supported by modern browsers, making it a versatile choice for creating modern web layouts. As you explore CSS Grid, experiment with different grid configurations and discover how it can streamline your layout design process.
+      </p>
+    </div>
+  </div>
+
+ 
+  <h2>Bootstrap Example</h2>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>1. Introduction to Bootstrap</h3>
+        <p>
+          Bootstrap is a popular front-end framework that simplifies the process of building responsive and visually appealing web pages. Developed by Twitter, Bootstrap provides a collection of pre-designed components, such as navigation bars, buttons, and forms, along with a responsive grid system. It enables developers to create consistent and modern-looking websites with minimal effort.
+        </p>
+        <p>
+          In our example, the Bootstrap grid system is used to create a row with three columns. Each column contains dummy content to illustrate how Bootstrap components can be easily integrated into a web page. Bootstrap's responsive classes ensure that the layout adapts to different screen sizes.
+        </p>
+      </div>
+
+      <div class="col-sm-4">
+        <h3>2. Key Features of Bootstrap</h3>
+        <p>
+          Bootstrap comes with a set of key features that enhance the development workflow. These features include a responsive grid system, extensive CSS and JavaScript components, and a customizable design. The framework is built on the principles of mobile-first design, ensuring that websites look great on various devices and screen sizes.
+        </p>
+        <p>
+          Bootstrap also includes a responsive typography system, form styling, and utility classes for quick layout adjustments. By leveraging the power of Bootstrap, developers can save time and create professional-looking websites with ease.
+        </p>
+      </div>
+
+      <div class="col-sm-4">
+        <h3>3. Getting Started with Bootstrap</h3>
+        <p>
+          To get started with Bootstrap, include the Bootstrap CSS and JS files in your project. Use the predefined classes to apply styling and layout to your HTML elements. Bootstrap's documentation provides extensive guidance on using its components and utilities effectively.
+        </p>
+        <p>
+          Bootstrap is designed to be beginner-friendly, making it an excellent choice for developers of all skill levels. Whether you're building a simple landing page or a complex web application, Bootstrap can streamline the development process and ensure a consistent and polished result.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+    </nav>
+</footer>
+
+
+  <!-- Link to Bootstrap JS and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
