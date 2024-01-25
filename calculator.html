@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/calculator.css">
+    <title>Calculator</title>
+    
+</head>
+<body>
+    <nav class = "navbar">
+
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+            </ul>
+
+    </nav>
+
+  
+
+    <div class = "calculator">
+
+        <div class = "dummy">
+
+            
+            <h3 id = "hovering"> INSTRUCTION : <span onmouseover="hovering()" onmouseout="unhovering()">Hover on to see them</span></h3>
+            <p >
+               <ol id = "instruction">
+                <li>Enter the number in first box</li>
+                <li>Enter second number in the second box</li>
+                 <li>Click on any of the operator below</li>
+               </ol>
+            </p>
+
+            <h1>History of use of time use </h1>
+            <p>
+
+                <ul id = "history">
+                
+
+                </ul>
+
+
+            </p>
+            
+
+        </div>
+
+        <div class = "screen">
+
+            <form action="">
+                <input class = "number1", type="number",id = "number1",name = "number", placeholder="Enter number 1 ">
+            </form>
+
+     
+
+            <form action="">
+                <label id = "opera"></label>
+                <input class ="number2" ,type="number",id = "number2",name = "number", placeholder="Enter number 2">
+            </form>
+
+            <form action="">
+                <label class = "operated"> = </label>
+                <input class = "answer",type="number",id = "answer",name = "answer", placeholder="0" disabled>
+            </form>
+
+           
+
+
+
+        </div>
+        <div class = "operation">
+            <button id = "add" onclick="add()" >+</button>
+            <button id = "sub" onclick="sub()">-</button>
+            <button id = "mult" onclick="mult()">*</button>
+            <button id = "div" onclick="div()">/</button>
+        </div>
+        
+
+    </div>
+
+
+
+    <script>
+
+        function hovering(){
+
+            var instruction = document.getElementById("instruction")
+
+            instruction.style.display = 'block'
+            instruction.style.color = 'white'
+            instruction.style.backgroundColor= "#368983"
+            instruction.style.padding = "30px"
+            instruction.style.borderRadius = "10px"
+
+            }
+
+
+
+            function unhovering(){
+
+                var instruction = document.getElementById("instruction")
+
+                instruction.style.display = 'none'
+
+                }
+
+
+
+
+            
+
+        function sub(){
+            addLi();
+            var labelElement = document.getElementById('opera');
+            labelElement.textContent = '-';
+            labelElement.style.color = "red";
+            labelElement.style.fontSize= "30px"
+
+            var a =document.querySelector('.number1');
+            var b = document.querySelector('.number2')
+
+    
+    
+            var reponse = parseInt(a.value)-parseInt(b.value)
+
+            var answer = document.querySelector(".answer")
+          
+            answer.value = reponse
+            answer.style.color = "red"
+            answer.style.backgroundColor = "yellow"
+        }
+
+
+        function add(){
+
+                addLi();
+
+                var labelElement = document.getElementById('opera');
+                labelElement.textContent = '+';
+                labelElement.style.color = "red";
+                labelElement.style.fontSize= "30px"
+                var a =document.querySelector('.number1');
+                var b = document.querySelector('.number2')
+                var label = document.getElementsByClassName("opera")
+
+                var reponse = parseInt(a.value)+parseInt(b.value)
+
+                var answer = document.querySelector(".answer")
+
+                answer.value = reponse
+                answer.style.color = "red"
+                answer.style.backgroundColor = "yellow"
+            
+
+            
+
+        }
+
+        function addLi(){
+
+            var addedElement = document.getElementById("history")
+
+            var li = document.createElement("li")
+            li.innerHTML = '<strong>'+ time() +'</strong>'
+            li.style.color =  "red";
+            addedElement.appendChild(li);
+            
+
+        }
+
+        function time(){
+
+            var time = new Date()
+            var hour = time.getHours()
+            var minute = time.getMinutes()
+            var second = time.getSeconds()
+            var date = time.getDate()
+            var year = time.getFullYear()
+
+
+            var formattedTime =  "Time "+ hour + ":" + minute + ":" + second + " "+ date+"/"+year
+
+            return formattedTime
+        }
+
+        function mult(){
+
+            addLi();
+
+            var labelElement = document.getElementById('opera');
+
+           
+            labelElement.textContent = '*';
+            labelElement.style.color = "red";
+            labelElement.style.fontSize= "30px"
+            
+            var a =document.querySelector('.number1');
+            var b = document.querySelector('.number2');
+            var reponse = parseInt(a.value)*parseInt(b.value);
+
+            var answer = document.querySelector(".answer");
+
+            answer.value = reponse;
+            answer.style.color = "red";
+            answer.style.backgroundColor = "yellow";
+
+            console.log(time())
+
+        
+             }
+
+            function div(){
+                addLi();
+
+                var labelElement = document.getElementById('opera');
+           
+                labelElement.textContent = '/';
+                labelElement.style.color = "red";
+                labelElement.style.fontSize= "30px"
+                var a =document.querySelector('.number1');
+                var b = document.querySelector('.number2');
+                var reponse = parseInt(a.value)/parseInt(b.value);
+                var answer = document.querySelector(".answer")
+                answer.value = reponse
+                answer.style.color = "red"
+                answer.style.backgroundColor = "yellow"}
+    </script>
+
+
+    
+</script>
+        
+
+
+    
+
+
+    
+</body>
+</html>

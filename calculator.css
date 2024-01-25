@@ -1,0 +1,74 @@
+body{
+
+    margin:  0px;
+
+}
+
+nav{
+    background-color:#368983;
+
+    padding: 10px;
+    
+
+}
+
+nav li{
+    display: inline-flex;
+    color:white;
+    padding-left: 20vh;
+    text-align: left;
+
+}
+
+footer{
+    background-color: #368983;
+}
+
+footer ul li{
+    display: inline-flex;
+    padding: 40px;
+    color :white 
+}
+
+.screen{
+    display: inline-flex;
+    padding:30px;
+    justify-content: center;
+    border: #368983 solid 3px;
+    border-radius: 30px;
+    margin:20px
+}
+
+.screen form{
+
+    padding: 40px;
+}
+
+.screen form input{
+
+    padding:20px
+
+}
+.operation button{
+    display: inline-flex;
+    padding:20px;
+    margin-left:50px ;
+    border-radius: 13px;
+    font-size: 30px;
+}
+
+#instruction{
+
+    display: none;
+}
+
+button:active{
+    color:white;
+    background-color:#368983;
+}
+
+.dummy{
+
+    margin: 20px;
+
+}
