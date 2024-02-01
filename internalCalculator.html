@@ -3,38 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/calculator.css">
     <title>Calculator</title>
+
+    <style>
+
+                    body{
+
+                    margin:  0px;
+
+                    }
+
+                    nav{
+                    background-color:#368983;
+
+                    padding: 10px;
+
+
+                    }
+
+                    nav li{
+                    display: inline-flex;
+                    color:white;
+                    padding-left: 20vh;
+                    text-align: left;
+
+                    }
+
+                    footer{
+                    background-color: #368983;
+                    }
+
+                    footer ul li{
+                    display: inline-flex;
+                    padding: 40px;
+                    color :white 
+                    }
+
+                    .screen{
+                    display: inline-flex;
+                    padding:30px;
+                    justify-content: center;
+                    border: #368983 solid 3px;
+                    border-radius: 30px;
+                    margin:20px
+                    }
+
+                    .screen form{
+
+                    padding: 40px;
+                    }
+
+                    .screen form input{
+
+                    padding:20px
+
+                    }
+                    .operation button{
+                    display: inline-flex;
+                    padding:20px;
+                    margin-left:50px ;
+                    border-radius: 13px;
+                    font-size: 30px;
+                    }
+
+                    #instruction{
+
+                    display: none;
+                    }
+
+                    button:active{
+                    color:white;
+                    background-color:#368983;
+                    }
+
+                    .dummy{
+
+                    margin: 20px;
+
+                    }
+
+
+
+
+    </style>
     
 </head>
 <body>
-    <nav class = "navbar" style = "background-color:#368983;padding: 30px;margin:-20px ">
+    <nav class = "navbar">
 
-            <ul style = "display: inline-block;">
-                <li style = "display: inline-block; padding :30px">Home</li>
-                <li style = "display: inline-block; padding : 30px">About Us</li>
+            <ul >
+                <li style="display: inline-flex;">Home</li>
+                <li style="display: inline-flex;">About Us</li>
             </ul>
 
     </nav>
 
   
 
-    <div>
+    <div class = "calculator">
 
         <div class = "dummy">
 
             
-            <h3 id = "hovering"> INSTRUCTION : <span  style = "background-color: blueviolet;padding:10px; border-radius :3px;"onmouseover="hovering()" onmouseout="unhovering()">Hover on me</span></h3>
+            <h3 id = "hovering"> INSTRUCTION : <span onmouseover="hovering()" onmouseout="unhovering()">Hover on to see them</span></h3>
             <p >
                <ol id = "instruction">
-
-                    <li>Enter the number in first box</li>
-                    <li>Enter second number in the second box</li>
-                    <li>Click on any of the operator below</li>
-                    
+                <li>Enter the number in first box</li>
+                <li>Enter second number in the second box</li>
+                 <li>Click on any of the operator below</li>
                </ol>
             </p>
 
-            <h1 style = "color:#368983">History of use of time use </h1>
+            <h1>History of use of time use </h1>
             <p>
 
                 <ul id = "history">
@@ -50,20 +131,20 @@
 
         <div class = "screen">
 
-            <form action="" style = "display:inline-block; padding:30px">
-                <input style = "padding:30px" class = "number1", type="number",id = "number1",name = "number", placeholder="Enter number 1 ">
+            <form action="">
+                <input class = "number1", type="number",id = "number1",name = "number", placeholder="Enter number 1 ">
             </form>
 
      
 
-            <form action="" style = "display:inline-block">
+            <form action="">
                 <label id = "opera"></label>
-                <input style = "padding:30px" class ="number2" ,type="number",id = "number2",name = "number", placeholder="Enter number 2">
+                <input class ="number2" ,type="number",id = "number2",name = "number", placeholder="Enter number 2">
             </form>
 
-            <form action="" style = "display:inline-block; padding:30px">
+            <form action="">
                 <label class = "operated"> = </label>
-                <input style = "padding:30px"class = "answer",type="number",id = "answer",name = "answer", placeholder="0" disabled>
+                <input class = "answer",type="number",id = "answer",name = "answer", placeholder="0" disabled>
             </form>
 
            
@@ -72,23 +153,10 @@
 
         </div>
         <div class = "operation">
-            <button  id = "add" onclick="add()" style = "padding:20px;
-            margin-left:50px ;
-            border-radius: 13px;
-            font-size: 30px;" >+</button>
-
-            <button id = "sub" onclick="sub()" style = "padding:20px;
-            margin-left:50px ;
-            border-radius: 13px;
-            font-size: 30px;">-</button>
-            <button id = "mult" onclick="mult()" style = "padding:20px;
-            margin-left:50px ;
-            border-radius: 13px;
-            font-size: 30px;">*</button>
-            <button id = "div" onclick="div()" style = "padding:20px;
-            margin-left:50px ;
-            border-radius: 13px;
-            font-size: 30px;">/</button>
+            <button id = "add" onclick="add()" >+</button>
+            <button id = "sub" onclick="sub()">-</button>
+            <button id = "mult" onclick="mult()">*</button>
+            <button id = "div" onclick="div()">/</button>
         </div>
         
 
@@ -254,4 +322,3 @@
     
 </body>
 </html>
-
